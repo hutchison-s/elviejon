@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    padding-bottom: 60px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    justify-content: right;
+    align-items: flex-end;
+    padding: 0.5rem 1rem;
+    border-bottom: 5px solid red;
+    z-index: 1;
+}
+nav h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0 0.5rem;
+    width: 100%;
+    text-align: right;
+    font-family: 'Merriweather', serif;
+}
+.flexDiv {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    font-size: x-small;
+}
+nav button {
+    flex: 60%;
+    padding: 0.5rem 1.5rem;
+    font-weight: 800;
+    max-width: 300px;
+    background: red;
+    border: 0.25rem solid green;
+    /* font-size: 1rem; */
+    color: white;
+    border-radius: 2rem;
+}
+nav button .caveat {
+    font-size: x-small;
+}
+#hoursDropdown {
+    text-align: center;
+    cursor: pointer;
+    font-size: medium;
+    display: grid;
+    place-items: center;
+}
+#hoursInfo {
+    background: black;
+    line-height: 1.5;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    transition: all 0.2s;
+}
+#hoursInfo.visible {
+    height: fit-content;
+    width: 75vw;
+    max-width: 500px;
+    padding: 1rem;
+    border: 2px solid red;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-color: transparent;
+}
+#hoursInfo table {
+    max-width: 300px;
+    margin: 0 auto;
+    width: 0;
+}
+#hoursInfo.visible table {
+    width: unset;
+}
+#hoursInfo tr{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+#logoCircle {
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    width: 40vw;
+    max-width: 300px;
+    aspect-ratio: 1;
+    background: black;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+#logoImg {
+    position: relative;
+    background-image: 
+        url('./viejon-logo-official-removebg-preview.png'),
+        linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: center;
+    border-radius: 50%;
+    width: 85%;
+    aspect-ratio: 1;
+    z-index: 4;
+}
+#logoCircle img {
+    border-radius: 50%;
+    width: 80%;
+}
+#photoSlider {
+    margin-top: 20vh;
+    display: flex;
+    width: 100vw;
+    z-index: -1;
+    overflow-x: scroll;
+    border-bottom:5px solid black;
+    outline: 10px solid red;
+}
+#photoSlider img {
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    flex: 1;
+    z-index: 0;
+    transition: flex 0.5s, filter 0.5s, scale 4s;   
+}
+#photoSlider img.landscape {
+    display: none;
+}
+
+#menu {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 4rem 5vw 4rem;
+    gap: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#meatOutter {
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    overflow: hidden;
+}
+#meatWrapper {
+    position: relative;
+    width: 2000px;
+    height: 110px;
+    overflow: hidden;
+    padding: 1rem;
+    margin: -20px auto 0;
+}
+#meatSlider {
+    position: absolute;
+    width: 200%;
+    display: flex;
+    animation: slideleft 20s linear infinite;
+}
+#meatSlider span {
+    width: 50%;
+    display: flex;
+}
+#meatSlider .meat {
+    display: inline-block;
+    flex: 1 0 200px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    border-left: 10px solid white;
+    color: white;
+    background: #65ce68;
+}
+@keyframes slideleft {
+    from {left: 0}
+    to {left: -100%}
+}
+.menuItem {
+    width: 80vw;
+    max-width: 600px;
+    font-size: x-large;
+    position: relative;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-items: center;
+    text-align: left;
+    margin-left: 10vw;
+    padding: 0 5vw;
+}
+.menuItem p {
+    display: inline-block;
+    font-size: 1rem;
+}
+.menuItem h3 {
+    display: inline-block;
+}
+.menuItem h3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    background: center / cover url('./taco-point.png') no-repeat;
+    width: 50px;
+    height: 50px;
+}
+.menuItem.drink h3:before {
+    background: center / cover url('./drink-point.png') no-repeat;
+}
+#map hr {
+    margin: 1rem auto;
+}
+
+#map {
+    width: 100%;
+    padding: 20px 10vw;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#map h2 {
+    font-size: 3rem;
+}
+#map h3 {
+    margin: 20px auto;
+    font-size: 2rem;
+}
+#map iframe {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 30vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    min-height: 80px;
+    padding: 4px 10vw;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    color: red;
+    border-radius: 1rem;
+    text-shadow: 0 0 20px white;
+}
+footer .contactInfo {
+    display: grid;
+    text-align: center;
+    place-items: center;
+}
+footer .social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+footer .social a:hover {
+    scale: 1.1;
+}
+#fb {
+    cursor:pointer;
+}
+
+@media screen and (min-width: 420px) {
+    nav {
+        height: 15vh;
+        padding-right: 2rem;
+    }
+    #photoSlider {
+        margin-top: 15vh;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    nav {
+        height: 20vh;
+        padding: 1rem 5vw;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: flex-end;
+    }
+    nav h1 {
+        font-size: 3.5rem;
+
+    }
+    #photoSlider {
+        margin-top: 20vh;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav h1 {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+    .flexDiv {
+        font-size: larger;
+        right: 4rem;
+    }
+    #photoSlider {
+        height: 70vh;
+        width: 100%;
+        max-width: 1200px;
+        margin: 20vh auto 0;
+        overflow: hidden;
+        outline: none;
+        border: 4px solid black;
+    }
+    #photoSlider img {
+        height: calc(100vh - 150px);
+    }
+    #photoSlider img.landscape {
+        display: unset;
+    }
+    #menu {
+        height: fit-content;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: visible;
+        border-left: 4px solid black;
+        border-right: 4px solid black;
+    }
+    #map {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+        border-left: 4px solid black;
+        border-right: 4px solid black;
+    }
+    footer {
+        height: 80px;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
