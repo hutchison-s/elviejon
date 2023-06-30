@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles.css">
         <script src="./script.js" defer></script>
         <script src="https://kit.fontawesome.com/6a8f656999.js" crossorigin="anonymous"></script>
-        <link rel="icon" href="./logo.png" type="image/png">
+        <link rel="icon" href="./images/logo.jpg" type="image/jpg">
         <title>Tacos El Viejón</title>
         <meta name="description" content="Tacos estilo Jalisco">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
                 <div id="hoursDropdown">Hours <i class="fa-solid fa-angle-down"></i>
                     <div id="hoursInfo">
                         <table>
-                            <tr style="justify-content: center;"><th style="column-span: 2;"><b>Shawnee & Kansas City</b></th></tr>
+                            <tr style="justify-content: center;"><th style="column-span: 2;"><b>Shawnee, Central KCK,<br>Armourdale KCK</b></th></tr>
                             <tr style="justify-content: center;"><td >---------------------</td></tr>
                             <tr>
                                 <td>Saturday</td>
@@ -87,13 +87,18 @@
             <div id="logoCircle"><div id="logoImg"></div></div>
         </nav>
         <section id="photoSlider">
-            <img src="viejon-plate.jpeg" alt="Tacos">
-            <img src="viejon-tacos2.png" alt="Tacos">
-            <img src="viejon-drinks.jpeg" class='landscape' alt="Tacos">
-            <img src="viejon-pastor.jpeg" alt="Tacos" >
-            <img src="viejon-guac.jpeg" alt="Tacos" >
-            <img src="viejon-fish.jpeg" class='landscape' alt="Tacos" >
-            <img src="viejon-truck2.jpeg" class='landscape' alt="Tacos" >
+            <img src="./images/tacos-green.jpg" alt="Tacos">
+            <img src="./images/shrimp.jpg" class='landscape' alt="Fajitas" >
+            <img src="./images/tacos-dine-in.jpg" alt="Tacos">
+            <img src="./images/dish.jpg" class='landscape' alt="Mexican Dish">
+            <img src="./images/tacos-street.jpg" alt="Tacos">
+            <img src="./images/mulitas.jpg" alt="Mulitas" >
+            <img src="./images/guac.jpeg" alt="Guacamole" >
+            <img src="./images/taco-plate.jpg" class='landscape' alt="Tacos">
+            <img src="./images/fish.jpg" class='landscape' alt="Fish" >
+            <img src="./images/tacos-pepper.jpg" alt="Tacos">
+            <img src="./images/chicken.jpg" alt="Fajitas">
+            
         </section>
         
         <section id="menu">
@@ -126,28 +131,75 @@
                 </div>
             </div>
         </section>
-        <section id="map">
+        <section id="locations">
             <h2>Locations</h2>
-            <hr><br>
 
-            <h3>6129 Nieman Rd - Shawnee, KS</h3>
-            <h4>Food Truck</h4>
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1549.960078646787!2d-94.714573!3d39.0171348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0eda9d936d189%3A0x7fef34e21899444f!2sTacos%20El%20Viejon%20-%20Shawnee!5e0!3m2!1sen!2sus!4v1685246436047!5m2!1sen!2sus" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <hr>
-            <h3>1239 Central Ave, Kansas City, KS</h3>
-            <h4>Food Truck</h4>
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99076.8707030244!2d-94.79484080273436!3d39.103004700000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f1195b95513d%3A0x2382bffe50c87fa8!2sTacos%20El%20Viejon%20-%20Kansas%20City!5e0!3m2!1sen!2sus!4v1685824289329!5m2!1sen!2sus" width="600" height="450" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <hr>
-            <h3>409 E Santa Fe St - Olathe, KS</h3>
-            <h4>Dine-in restaurant *different hours*</h4>
-            <p>Mon-Fri: 10AM-11PM</p><p>Sat-Sun: 10AM - MIDNIGHT</p>
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99385.04528032051!2d-94.96817330273437!3d38.88321400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0bd665d704fa1%3A0x7d371083c2ad62!2sTacos%20El%20Viejon%20-%20Olathe!5e0!3m2!1sen!2sus!4v1685813361729!5m2!1sen!2sus" width="600" height="450" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="locationCard">
+                <h3>Olathe</h3><div class="innerLocation">
+                    
+                    <h4>409 E Santa Fe St. <br>Olathe, KS</h4>
+                </div>
+                <div class="innerContent">
+                    <div class="innerFrame"><img src="./locations/olathe.jpg" alt="restaurant"></div>
+                    <div class="innerLinks">
+                        <a href="./menus/restaurant-food.jpg">Food Menu</a>
+                        <a href="./menus/restaurant-drinks.jpg">Drink Menu</a>
+                    </div>
+                </div>
+                <div class="innerMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99385.04528032051!2d-94.96817330273437!3d38.88321400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0bd665d704fa1%3A0x7d371083c2ad62!2sTacos%20El%20Viejon%20-%20Olathe!5e0!3m2!1sen!2sus!4v1685813361729!5m2!1sen!2sus" width="600" height="450" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="locationCard">
+                <h3>Shawnee</h3><div class="innerLocation">
+                    
+                    <h4>6129 Nieman Rd. <br>Shawnee, KS</h4>
+                </div>
+                <div class="innerContent">
+                    <div class="innerFrame"><img src="./locations/shawnee.jpg" alt="food truck"></div>
+                    <div class="innerLinks">
+                        <a href="./menus/truck-spanish.png">Spanish Menu</a>
+                        <a href="./menus/truck-english.png">English Menu</a>
+                    </div>
+                </div>
+                <div class="innerMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1549.960078646787!2d-94.714573!3d39.0171348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0eda9d936d189%3A0x7fef34e21899444f!2sTacos%20El%20Viejon%20-%20Shawnee!5e0!3m2!1sen!2sus!4v1685246436047!5m2!1sen!2sus" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
 
-        </section>
-        <section id="reviews">
+            <div class="locationCard">
+                <h3>Central KCK</h3><div class="innerLocation">
+                    
+                    <h4>1239 Central Ave. <br>Kansas City, KS</h4>
+                </div>
+                <div class="innerContent">
+                    <div class="innerFrame"><img src="./locations/central.jpg" alt="food truck"></div>
+                    <div class="innerLinks">
+                        <a href="./menus/truck-spanish.png">Spanish Menu</a>
+                        <a href="./menus/truck-english.png">English Menu</a>
+                    </div>
+                </div>
+                <div class="innerMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99076.8707030244!2d-94.79484080273436!3d39.103004700000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f1195b95513d%3A0x2382bffe50c87fa8!2sTacos%20El%20Viejon%20-%20Kansas%20City!5e0!3m2!1sen!2sus!4v1685824289329!5m2!1sen!2sus" width="600" height="450" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="locationCard">
+                <h3>Armourdale KCK</h3>
+                <div class="innerLocation">
+                    <h4>800 S 7th St. <br>Kansas City, KS</h4>
+                </div>
+                <div class="innerContent">
+                    <div class="innerFrame"><img src="./locations/800south.jpg" alt="food truck"></div>
+                    <div class="innerLinks">
+                        <a href="./menus/truck-spanish.png">Spanish Menu</a>
+                        <a href="./menus/truck-english.png">English Menu</a>
+                    </div>
+                </div>
+                <div class="innerMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99076.8707030244!2d-94.79484080273436!3d39.103004700000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f1195b95513d%3A0x2382bffe50c87fa8!2sTacos%20El%20Viejon%20-%20Kansas%20City!5e0!3m2!1sen!2sus!4v1685824289329!5m2!1sen!2sus" width="600" height="450" style="border:10px solid black; outline: 5px solid red;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
 
         </section>
         <footer>
@@ -156,10 +208,10 @@
             </div>
             <div class="social">
                 <a href='https://www.facebook.com/tacosviejonsh/' id="fb">
-                    <img src="./fb-icon.png" width='60px' alt='Facebook'/>
+                    <img src="./fb-icon.png" alt='Facebook'/>
                 </a>
                 <a href="https://www.instagram.com/tacoselviejon21/">
-                    <img src="./insta-icon.png" width='60px' alt="Instagram">
+                    <img src="./insta-icon.png" alt="Instagram">
                 </a>
             </div>
         </footer>

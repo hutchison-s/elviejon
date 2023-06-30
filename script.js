@@ -16,22 +16,6 @@ hoursBtn.addEventListener("click", ()=>{
     hours.classList.toggle("visible")
 })
 
-fetch('https://elviejonmenu.vercel.app/api/menu/', {method: 'GET', headers: {"Content-Type": "application/json", "Accept": "application/json"}})
-        .then(response => response.json())
-        .then(parsed => {
-            parsed.forEach(entry => {
-                document.getElementById('menu').innerHTML += `
-                <article class="${"menuItem "+entry.type}">
-                    <h3>${String(entry.item).toUpperCase()}</h3>
-                    <p>$${entry.price}</p>
-                </article>
-                `
-            }
-            )
-            
-        })
-        .catch(console.log)
-
 let i = 0;
 setInterval(()=>{
     const p = window.innerWidth < 1000 ? photos.filter(x=>(!x.classList.contains('landscape'))) : photos

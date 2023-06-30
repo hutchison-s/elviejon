@@ -5,6 +5,9 @@
     padding: 0;
     margin: 0;
 }
+:root {
+    --grn: #24983d;
+}
 body {
     overflow-x: hidden;
     padding-bottom: 60px;
@@ -14,19 +17,20 @@ nav {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 20vh;
+    height: 20vw;
+    min-height: 120px;
     background-color: black;
     color: white;
     display: grid;
     justify-content: right;
     align-items: flex-end;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0;
     border-bottom: 5px solid red;
     z-index: 1;
 }
 nav h1 {
     font-size: 2rem;
-    margin: 1.5rem 0 0.5rem;
+    margin: 1.5rem 0 0;
     width: 100%;
     text-align: right;
     font-family: 'Merriweather', serif;
@@ -45,7 +49,7 @@ nav button {
     font-weight: 800;
     max-width: 300px;
     background: red;
-    border: 0.25rem solid green;
+    border: 0.25rem solid var(--grn);
     /* font-size: 1rem; */
     color: white;
     border-radius: 2rem;
@@ -96,7 +100,8 @@ nav button .caveat {
     position: fixed;
     top: -20px;
     left: -20px;
-    width: 40vw;
+    width: 30vw;
+    min-width: 150px;
     max-width: 300px;
     aspect-ratio: 1;
     background: black;
@@ -108,7 +113,7 @@ nav button .caveat {
 #logoImg {
     position: relative;
     background-image: 
-        url('./viejon-logo-official-removebg-preview.png'),
+        url('./images/logo-transparent.png'),
         linear-gradient(white, white);
     background-repeat: no-repeat;
     background-size: 150%;
@@ -123,11 +128,12 @@ nav button .caveat {
     width: 80%;
 }
 #photoSlider {
-    margin-top: 20vh;
+    margin-top: 20vw;
     display: flex;
     width: 100vw;
     z-index: -1;
     overflow-x: scroll;
+    overflow-y: hidden;
     border-bottom:5px solid black;
     outline: 10px solid red;
 }
@@ -149,7 +155,7 @@ nav button .caveat {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 4rem 5vw 4rem;
+    padding: 4rem 5vw 2rem;
     gap: 2rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -186,76 +192,106 @@ nav button .caveat {
     padding: 0.5rem 0;
     border-left: 10px solid white;
     color: white;
-    background: #65ce68;
+    background: var(--grn);
 }
 @keyframes slideleft {
     from {left: 0}
     to {left: -100%}
 }
-.menuItem {
-    width: 80vw;
-    max-width: 600px;
-    font-size: x-large;
-    position: relative;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    align-items: center;
-    text-align: left;
-    margin-left: 10vw;
-    padding: 0 5vw;
-}
-.menuItem p {
-    display: inline-block;
-    font-size: 1rem;
-}
-.menuItem h3 {
-    display: inline-block;
-}
-.menuItem h3:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -40px;
-    background: center / cover url('./taco-point.png') no-repeat;
-    width: 50px;
-    height: 50px;
-}
-.menuItem.drink h3:before {
-    background: center / cover url('./drink-point.png') no-repeat;
-}
-#map hr {
-    margin: 1rem auto;
-}
 
-#map {
+#locations {
     width: 100%;
-    padding: 20px 10vw;
-    text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-#map h2 {
+#locations h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+#locations h3 {
     font-size: 3rem;
+    color: #fff;
+    background-color: #000;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
-#map h3 {
-    margin: 20px auto;
-    font-size: 2rem;
+#locations h4 {
+    font-size: 1rem;
 }
-#map iframe {
+#locations iframe {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    height: 30vh;
+    height: 20vh;
+    min-height: 250px;
 }
+
+.locationCard {
+    display: grid;
+    gap: 1rem;
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid #000000;
+    border-radius: 1rem;
+    background-color: #fafafa;
+    box-shadow: 4px 4px 15px #00000033;
+}
+.innerLocation {
+    padding: 0 1rem;
+}
+.innerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+}
+.innerFrame {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.innerFrame img {
+    width: 100%;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+    object-position: center;
+}
+.innerLinks {
+    flex: 3;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.innerLinks a {
+    display: block;
+    font-size: xx-large;
+    font-family: 'Merriweather', serif;
+    color: var(--grn);
+    font-weight: 900;
+    text-decoration: none;
+    text-shadow: 2px 2px 15px #00000044;
+}
+.innerLinks a:hover {
+    color: red;
+}
+.innerMap {
+    width: 99%;
+    padding: 0 1rem 1rem;
+    margin: 0 auto;
+}
+
+
 
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
-    height: 5vh;
-    min-height: 80px;
-    padding: 4px 10vw;
+    padding: 0.5rem 10vw;
     background: black;
     color: white;
     font-size: 1rem;
@@ -271,6 +307,9 @@ footer a:hover {
     color: red;
     border-radius: 1rem;
     text-shadow: 0 0 20px white;
+}
+footer img {
+    width: 30px;
 }
 footer .contactInfo {
     display: grid;
@@ -289,9 +328,15 @@ footer .social a:hover {
     cursor:pointer;
 }
 
+@media screen and (max-height: 780px) {
+    nav h1 {
+        font-size: 1.8rem;
+    }
+}
+
 @media screen and (min-width: 420px) {
     nav {
-        height: 15vh;
+        height: 15vw;
         padding-right: 2rem;
     }
     #photoSlider {
@@ -301,8 +346,8 @@ footer .social a:hover {
 
 @media screen and (min-width: 680px) {
     nav {
-        height: 20vh;
-        padding: 1rem 5vw;
+        height: 20vw;
+        padding: 1rem 5vw 0;
         width: 100vw;
         display: flex;
         flex-wrap: wrap;
@@ -310,11 +355,17 @@ footer .social a:hover {
         justify-content: flex-end;
     }
     nav h1 {
-        font-size: 3.5rem;
-
+        font-size: 3rem;
+        margin-left: 6rem;
     }
     #photoSlider {
-        margin-top: 20vh;
+        margin-top: 20vw;
+    }
+    .innerFrame {
+        flex: 3;
+    }
+    footer img {
+        width: 45px;
     }
 
 }
@@ -328,6 +379,7 @@ footer .social a:hover {
     }
     nav {
         justify-content: center;
+        height: 20vh;
     }
     nav h1 {
         font-size: 4.5rem;
@@ -352,6 +404,9 @@ footer .social a:hover {
     #photoSlider img.landscape {
         display: unset;
     }
+    #logoCircle {
+        width: 30vh;
+    }
     #menu {
         height: fit-content;
         gap: 50px;
@@ -361,7 +416,7 @@ footer .social a:hover {
         border-left: 4px solid black;
         border-right: 4px solid black;
     }
-    #map {
+    #locations {
         max-width: 1200px;
         margin: 0 auto;
         padding-bottom: 100px;
